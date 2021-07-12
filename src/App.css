@@ -1,5 +1,50 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-color: rgb(211, 233, 171);
 }
 
+/* ..................Nav,,,,............................. */
+
+.Header {
+  background-color: rgb(238, 206, 27);
+  margin:0px;
+  padding:3px;
+
+}
+/* ..................Nav,,,,............................. */
+.Nav{
+  background-color: rgb(30, 136, 15);
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+  padding:7px;
+}
+.Nav h2{
+  display: inline;
+  margin: 10px;
+
+}
+
+
+/* ..................Reviews............................. */
+
+.Reviews_list {
+  display: inline-block;
+}
+.Reviews_list li {
+  list-style: none;
+
+}
+.Reviews_img {
+ width:320px;
+ height:320px;
+}
+
+/* ..................Categories............................. */
+
+.Categories_list {
+  list-style: none;
+}
 
