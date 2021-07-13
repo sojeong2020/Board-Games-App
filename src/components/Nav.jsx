@@ -1,15 +1,29 @@
+import {useState, useEffect} from 'react';
+import { getCategories } from '../utils/api';
 import {Link} from 'react-router-dom';
 
 const Nav = () => {
+    const [categories, setCategories] = useState([]);
+
+    useEffect(()=>{
+        getCategories().then((categoriesFromApi)=>{
+            console.log(categoriesFromApi)
+            setCategories(categoriesFromApi)
+        })
+    },[])
+
+
     return (
-        <div className="Nav">
-            <Link to="/reviews">
-            <h2>Reviews</h2>
-            </Link>
-            <Link to="/categories">
-            <h2>Categories</h2>
-            </Link>
-        </div>
+       <nav className="Nav">
+            { categories.map((category)=>{
+                     return(
+                        <Link to={`/reviews/${category.slug}`} key={category.slug}>
+                           <h2>{category.slug}</h2> 
+                        </Link>  
+                    );
+                 })
+            }
+        </nav>   
     );
 };
 

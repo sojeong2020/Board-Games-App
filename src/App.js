@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Reviews from './components/Reviews';
 import Nav from './components/Nav';
-import Categories from './components/Categories';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -11,15 +11,14 @@ function App() {
       <Header />
       <Nav />
       <Switch>
+        <Route exact path="/">
+        <Home />
+        </Route>
         <Route exact path="/reviews">
         <Reviews />
         </Route>
-
-        <Route exact path="/categories">
-        <Categories />
-        </Route>
-
-      </Switch>
+       
+        </Switch>
     </div>
   );
 }

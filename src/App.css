@@ -1,22 +1,33 @@
 .App {
+  
   text-align: center;
   min-height: 100vh;
   background-color: rgb(211, 233, 171);
 }
 
-/* ..................Nav,,,,............................. */
+/* ..................Header,,,,............................. */
 
 .Header {
   background-color: rgb(238, 206, 27);
   margin:0px;
   padding:3px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
+}
+.Home {
+  margin-left: 20px;
+}
+.Home_link {
+  margin-right: 20px;
 }
 /* ..................Nav,,,,............................. */
 .Nav{
   background-color: rgb(30, 136, 15);
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 20px;
   width: 100%;
   padding:7px;
@@ -42,9 +53,8 @@
  height:320px;
 }
 
-/* ..................Categories............................. */
 
-.Categories_list {
-  list-style: none;
+
+@media only screen and (min-width: 600px) {
+
 }
-

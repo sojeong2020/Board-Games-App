@@ -4,9 +4,20 @@ import {Link} from 'react-router-dom';
 const Header = () => {
     return (
         <div className="Header">
-            <Link to="/reviews">
-            <h1>Board Games</h1>
+            <div className="Home">
+            <Link to ="/">
+            <h2>Games</h2>
             </Link>
+            </div>
+
+            <div className="Home_link">
+            <Link to="/reviews">
+            <h2>Reviews</h2>
+            </Link>
+            </div>
+            
+           
+            
         </div>
     );
 };
