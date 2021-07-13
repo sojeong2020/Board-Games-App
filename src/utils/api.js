@@ -12,11 +12,20 @@ export const getCategories = () => {
     });
 };
 
-export const getReviews = () => {
+export const getReviews = (category) => {
+    let path ='/reviews';
+    if(category) path += `?category=${category}`;
+
     return gamesApi
-    .get('/reviews')
+    .get(path)
     .then((response)=>{
+        if(response.data.msg){
+            return [];
+        }
+        console.log(response)
         return response.data.reviews;
+         
+        
     })
 };
 

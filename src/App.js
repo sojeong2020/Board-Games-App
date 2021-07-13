@@ -14,6 +14,11 @@ function App() {
         <Route exact path="/">
         <Home />
         </Route>
+
+        <Route exact path="/reviews/:category">
+        <Reviews />
+        </Route>
+
         <Route exact path="/reviews">
         <Reviews />
         </Route>
