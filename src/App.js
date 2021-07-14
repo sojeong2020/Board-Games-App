@@ -1,11 +1,14 @@
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home';
+import Nav from './components/Nav';
 import Header from './components/Header';
 import Reviews from './components/Reviews';
-import Nav from './components/Nav';
-import Home from './components/Home';
+import SingleReview from './components/SingleReview';
+import Comments from './components/Comments';
 
 function App() {
+
   return (
     <div className="App">
       <Header />
@@ -15,15 +18,23 @@ function App() {
         <Home />
         </Route>
 
-        <Route exact path="/reviews/:category">
-        <Reviews />
-        </Route>
-
         <Route exact path="/reviews">
         <Reviews />
         </Route>
-       
-        </Switch>
+
+       <Route exact path="/reviews/category/:category">
+        <Reviews />
+        </Route>
+
+        <Route exact path="/reviews/:review_id">
+          <SingleReview />
+        </Route>
+
+        <Route exact path ="/reviews/:review_id/comments">
+          <Comments />
+        </Route>
+
+       </Switch>
     </div>
   );
 }

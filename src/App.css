@@ -53,7 +53,12 @@
  height:320px;
 }
 
+/* ..................SingleReview............................. */
 
+.SingleReview_img {
+  width:320px;
+  height:320px;
+}
 
 @media only screen and (min-width: 600px) {
 

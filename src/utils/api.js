@@ -22,20 +22,33 @@ export const getReviews = (category) => {
         if(response.data.msg){
             return [];
         }
-        console.log(response)
         return response.data.reviews;
-         
-        
     })
 };
-
-
-
-/* export const getReviewsByCategory = () =>{
+export const getSingleReview= (review_id)=>{
     return gamesApi
-    .get(`/reviews?category=${category}`)
+    .get(`/reviews/${review_id}`)
     .then((response)=>{
         console.log(response.data)
-        return response.data
+        return response.data.review
     })
-} */
+}
+
+export const getCommentsByReview= (review_id)=>{
+    return gamesApi
+    .get(`/reviews/${review_id}/comments`)
+    .then((response)=>{
+        console.log(response.data.comments)
+        return response.data.comments
+    })
+}
+
+
+
+
+
+
+ 
+
+
+

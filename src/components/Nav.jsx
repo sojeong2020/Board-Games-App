@@ -7,7 +7,6 @@ const Nav = () => {
 
     useEffect(()=>{
         getCategories().then((categoriesFromApi)=>{
-            console.log(categoriesFromApi)
             setCategories(categoriesFromApi)
         })
     },[])
@@ -17,7 +16,7 @@ const Nav = () => {
        <nav className="Nav">
             { categories.map((category)=>{
                      return(
-                        <Link to={`/reviews/${category.slug}`} key={category.slug}>
+                        <Link to={`/reviews/category/${category.slug}`} key={category.slug}>
                            <h2>{category.slug}</h2> 
                         </Link>  
                     );

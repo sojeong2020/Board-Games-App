@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { getReviews } from '../utils/api';
+import {Link} from 'react-router-dom'
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
@@ -26,7 +27,10 @@ const Reviews = () => {
                             
                             <li key={review.review_id}>
                                 <h2>{review.title}</h2>
+                                <Link to={`/reviews/${review.review_id}`}>
                                 <img className="Reviews_img" src={review.review_img_url} alt={review.title}></img>
+
+                                </Link>
                             </li>
                             
                             
