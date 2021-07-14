@@ -17,7 +17,7 @@ const Header = () => {
             </div>
 
              <div className="Home_link">
-             <h2>Loggined as {user.username}</h2>
+             <h2>Hello {user.username}</h2>
 
            
             </div> 
