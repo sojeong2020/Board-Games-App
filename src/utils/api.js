@@ -52,6 +52,14 @@ export const getUsers = () =>{
     })
 }
 
+export const createComment = (review_id, author,body) =>{
+    return gamesApi
+    .post(`/reviews/${review_id}/comments`,{author,body})
+    .then(()=>{
+        console.log("new comment added!")
+
+    })
+}
 
 
 

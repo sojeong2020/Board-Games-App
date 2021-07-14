@@ -19,7 +19,8 @@ const SingleReview = () => {
     
 
     return (
-        <div className="Review">
+        <main className="Review">
+            <div>
             <p>{review.title}</p>
             <img className="SingleReview_img" src={review.review_img_url} alt={review.title}></img>
             <p>Designer : {review.designer}</p>
@@ -28,9 +29,17 @@ const SingleReview = () => {
             <p>votes : {review.votes}</p>
             
             <Link to ={`/reviews/${review.review_id}/comments`}>
-                        see comments
+                        See comments
             </Link>
-        </div>
+            </div>
+
+            <div>
+            <Link to ={`/reviews/${review.review_id}/comments/add`}>
+                 Add comment
+            </Link>
+            </div>
+            
+        </main>
     );
 };
 

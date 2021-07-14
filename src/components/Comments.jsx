@@ -30,8 +30,6 @@ console.log(review_id)
                             <p>{comment.body}</p>
                             <p>Vote :{comment.votes}</p>
                         </li>
-                        
-                        
                     )
                     
                 })}
