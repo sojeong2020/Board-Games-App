@@ -43,7 +43,14 @@ export const getCommentsByReview= (review_id)=>{
     })
 }
 
-
+export const getUsers = () =>{
+    return gamesApi
+    .get('/users')
+    .then((response)=>{
+        console.log(response.data.users)
+        return response.data.users
+    })
+}
 
 
 

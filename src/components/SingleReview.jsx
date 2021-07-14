@@ -22,9 +22,10 @@ const SingleReview = () => {
         <div className="Review">
             <p>{review.title}</p>
             <img className="SingleReview_img" src={review.review_img_url} alt={review.title}></img>
-            <p>Designer {review.designer}</p>
+            <p>Designer : {review.designer}</p>
             <p>Review by {review.owner}</p>
-            <p>Review {review.review_body}</p>
+            <p>{review.review_body}</p>
+            <p>votes : {review.votes}</p>
             
             <Link to ={`/reviews/${review.review_id}/comments`}>
                         see comments

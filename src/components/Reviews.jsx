@@ -15,7 +15,7 @@ const Reviews = () => {
        })  
 
     },[category]) 
-  
+
     return (
         <main>
          <div className="Reviews_list">

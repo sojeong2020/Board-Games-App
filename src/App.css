@@ -60,6 +60,12 @@
   height:320px;
 }
 
+/* ..................Comments............................. */
+
+.Comments_list {
+  list-style: none;
+}
+
 @media only screen and (min-width: 600px) {
 
 }

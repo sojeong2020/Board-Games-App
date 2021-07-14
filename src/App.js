@@ -1,4 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
+import {useState} from 'react';
+import {UserContext} from './contexts/User';
 import './App.css';
 import Home from './components/Home';
 import Nav from './components/Nav';
@@ -6,12 +8,21 @@ import Header from './components/Header';
 import Reviews from './components/Reviews';
 import SingleReview from './components/SingleReview';
 import Comments from './components/Comments';
+import Users from './components/Users';
 
 function App() {
+  const [user,setUser] = useState(
+    {
+    "username": "mallionaire",
+    "avatar_url": "haz",
+    "name": "https://www.healthytherapies.com/wp-content/uploads/2016/06/Lime3.jpg"
+    }
+    );
 
   return (
+    <UserContext.Provider value={{user,setUser}}>
     <div className="App">
-      <Header />
+      <Header user={user}/>
       <Nav />
       <Switch>
         <Route exact path="/">
@@ -22,7 +33,7 @@ function App() {
         <Reviews />
         </Route>
 
-       <Route exact path="/reviews/category/:category">
+        <Route exact path="/reviews/category/:category">
         <Reviews />
         </Route>
 
@@ -34,8 +45,14 @@ function App() {
           <Comments />
         </Route>
 
-       </Switch>
+        <Route exact path ="/users">
+        <Users setUser={setUser}/>
+        </Route>
+
+      </Switch>
+
     </div>
+    </UserContext.Provider>
   );
 }
 

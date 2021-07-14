@@ -17,24 +17,28 @@ console.log(review_id)
     },[review_id]) 
 
     return (
-        <div>
-            <h2>comments</h2>
-            <ul>
+        <main>
+            <h2>{comments.length === 0? "no comment": "comments"}</h2>
+            
+            <ul className="Comments_list">
                 {comments.map((comment,idx)=>{
                     return (
+                        
                         <li key={idx}>
-                            <p>{comment.author}</p>
+                            <p>Author : {comment.author}</p>
                             <p>{comment.created_at}</p>
                             <p>{comment.body}</p>
-                            <p>{comment.votes}</p>
-
+                            <p>Vote :{comment.votes}</p>
                         </li>
+                        
+                        
                     )
+                    
                 })}
             </ul>
             
             
-        </div>
+        </main>
     );
 };
 
