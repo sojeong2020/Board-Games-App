@@ -52,6 +52,26 @@ export const getUsers = () =>{
     })
 }
 
+export const createComment = (review_id,newComment)=>{
+    return gamesApi
+    .post(`/reviews/${review_id}/comments`,newComment)
+    .then((response)=>{
+        console.log("posting new comment")
+        return response.data.comments;
+    }).catch((err)=>{
+        console.log(err)
+    })
+}
+
+export const deleteComment = (comment_id)=>{
+    return gamesApi
+    .delete(`/comments/${comment_id}`)
+    .then((response)=>{
+        console.log("delete the comment")
+        return response.data.comments
+    })
+}
+
 
 
 

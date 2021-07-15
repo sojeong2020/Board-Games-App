@@ -1,6 +1,6 @@
-import axios from 'axios';
 import {useState, useContext} from 'react';
 import { UserContext } from '../contexts/User';
+import { createComment } from '../utils/api'
 import { useParams } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
@@ -14,14 +14,13 @@ const CreateComment = () => {
  const {review_id} =useParams();
  const handleSubmit=(e) =>{
      e.preventDefault()
-    
-        axios.post(`https://first-nc-games.herokuapp.com/api/reviews/${review_id}/comments`,
-        {username: user.username, body: body})
-        .then(()=>{
-            console.log("new comment add")
-        }).catch((err)=>{
-            console.log(err);
-        })
+     
+    const newComment = {
+        username: user.username,
+        body: body
+    }
+     createComment(review_id,newComment);
+        
 }
 
 return (
