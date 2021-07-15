@@ -7,8 +7,7 @@ import {Link} from 'react-router-dom';
 const CreateComment = () => {
  const [body, setBody]=useState("");
  const [messageComment,setMessageComment]=useState(null);
-/*  const [votes,setVotes] =useState("");
- */
+
  const {user}=useContext(UserContext);
  const {review_id} =useParams();
 
@@ -35,16 +34,6 @@ return (
                 value={body}
                 onChange={(e)=> setBody(e.target.value)}
             ></textarea>
-       
-        {/* <label>
-            vote:
-            <input 
-            type="text"
-            pattern="[0-9]*"
-            value={votes}
-            onInput={(e)=> console.log(e.target.value)}
-            ></input>
-        </label> */}
         <br />
         <button>add</button>
         <br />

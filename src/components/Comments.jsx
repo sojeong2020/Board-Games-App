@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import { getCommentsByReview } from '../utils/api';
 import { useParams } from 'react-router-dom';
+import Delete from './Delete';
 
 
 
@@ -28,12 +29,17 @@ const Comments = () => {
                             <p>{comment.created_at}</p>
                             <p>{comment.body}</p>
                             <p>Vote :{comment.votes}</p>
+                            <Delete  commentId={comment.comment_id}
+                                     commentAuthor={comment.author}
+                                     setComments={setComments}
+                                     comments={comments}
+                                    />
+
                         </li>
                     )
                     
                 })}
             </ul>
-            
             
         </main>
     );

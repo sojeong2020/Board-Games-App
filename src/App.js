@@ -55,8 +55,8 @@ function App() {
           <CreateComment user={user}/>
         </Route>
 
-      <Route exact path="/">
-        <Delete />
+      <Route exact path="/comments/:comment_id">
+        <Delete user={user}/>
       </Route>       
 
       </Switch>
