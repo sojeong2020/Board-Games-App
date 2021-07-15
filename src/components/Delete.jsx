@@ -5,17 +5,20 @@ import { UserContext } from '../contexts/User';
 
 const Delete = ({commentId, commentAuthor, setComments, comments}) => {
     console.log(commentId)
+    console.log(comments)
     const [messageDelete,setMessageDelete]=useState("");
     const {user} = useContext(UserContext);
     console.log(user)
 
     const handleClick =(e)=>{
         e.preventDefault();
-        const chanedComments=[...comments]
-        console.log(chanedComments)
+
+        const restComments= [...comments].filter((comment)=>{
+            return comment.comment_id !== commentId
+        })
 
     if(user.username === commentAuthor){
-       setComments(chanedComments)
+       setComments(restComments)
 
        deleteComment(commentId);
 
@@ -25,11 +28,7 @@ const Delete = ({commentId, commentAuthor, setComments, comments}) => {
         setMessageDelete("you need to log in!")
  
     }
-       
-
-    
-
-    }
+}
     
     return (
         <div>
