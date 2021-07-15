@@ -22,7 +22,7 @@ const Delete = ({commentId, commentAuthor, setComments, comments}) => {
 
        deleteComment(commentId);
 
-       setMessageDelete("comment deleted!!")
+       alert ("deleted!!")
 
     } else {
         setMessageDelete("you need to log in!")
@@ -31,11 +31,11 @@ const Delete = ({commentId, commentAuthor, setComments, comments}) => {
 }
     
     return (
-        <div>
+        <section>
 
        <button onClick={handleClick}>delete</button>
         <p>{messageDelete}</p>    
-        </div>
+        </section>
     );
 };
 

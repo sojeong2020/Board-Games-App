@@ -11,6 +11,9 @@ import Comments from './components/Comments';
 import Users from './components/Users';
 import CreateComment from './components/CreateComment';
 import Delete from './components/Delete';
+import Footer from './components/Footer';
+import NotFoundPage from './components/NotFoundPage';
+import SortBy from './components/SortBy';
 
 function App() {
   const [user,setUser] = useState(
@@ -39,6 +42,10 @@ function App() {
         <Reviews />
         </Route>
 
+        <Route exact path="/reviews/sort_by">
+          <SortBy />
+        </Route>
+
         <Route exact path="/reviews/:review_id">
           <SingleReview />
         </Route>
@@ -57,9 +64,14 @@ function App() {
 
       <Route exact path="/comments/:comment_id">
         <Delete user={user}/>
-      </Route>       
+      </Route> 
+
+      <Route path="/">
+      <NotFoundPage />
+      </Route>    
 
       </Switch>
+      <Footer />
 
     </div>
     </UserContext.Provider>

@@ -14,8 +14,8 @@ export const getCategories = () => {
 
 export const getReviews = (category) => {
     let path ='/reviews';
-    if(category) path += `?category=${category}`;
 
+    if(category) path += `?category=${category}`;
     return gamesApi
     .get(path)
     .then((response)=>{
@@ -25,6 +25,30 @@ export const getReviews = (category) => {
         return response.data.reviews;
     })
 };
+
+export const getReviewsBySortBy =(owner,title,created_at,votes) =>{
+    let path='/reviews';
+
+    if(owner) {
+        path += `?sort_by=${owner}`;
+    } else if(title){
+        path += `?sort_by=${title}`;
+
+    }else if(created_at){
+        path += `?sort_by=${created_at}`;
+
+    }else if(votes){
+        path += `?sort_by=${votes}`;
+
+    }
+    return gamesApi
+    .get(path)
+    .then((response)=>{
+       console.log(response.data.reviews)
+        return response.data.reviews;
+    })
+};
+
 export const getSingleReview= (review_id)=>{
     return gamesApi
     .get(`/reviews/${review_id}`)
