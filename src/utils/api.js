@@ -68,7 +68,7 @@ export const patchReview = (review_id,patchVotes)=>{
     .patch(`/reviews/${review_id}`,patchVotes)
     .then((response)=>{
         console.log("patching review")
-        return response.data.review
+        return response.data
     })
 
 }

@@ -7,7 +7,7 @@ import {Link} from 'react-router-dom';
 
 const SingleReview = () => {
     const [review, setReview] = useState({});
-    const [vote,setVote]=useState("")
+    const [vote,setVote]=useState(0)
     const {review_id} =useParams();
 
 
@@ -22,8 +22,13 @@ const SingleReview = () => {
         setVote((currVote)=>{
             return currVote + 1
         })
-        const patchVotes={inc_votes: vote}
-        patchReview (review_id,patchVotes);
+
+        const patchVotes={inc_votes: 1}
+
+    patchReview (review_id,patchVotes);
+
+        
+
     }
 
     return (
@@ -34,8 +39,8 @@ const SingleReview = () => {
             <p>Designer : {review.designer}</p>
             <p>Review by {review.owner}</p>
             <p>{review.review_body}</p>
-            <p>votes : {review.votes}</p>
-            <button onClick={()=>{incVotes}}>like</button>
+            <p>votes : {review.votes +vote}</p>
+            <button onClick={incVotes}>I like it!</button> 
             
             <Link to ={`/reviews/${review.review_id}/comments`}>
                         See comments
