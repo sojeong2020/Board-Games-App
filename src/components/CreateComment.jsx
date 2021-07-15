@@ -17,7 +17,7 @@ const CreateComment = () => {
 
     const newComment = {
         username: user.username,
-        body: body
+        body: body,
     }
      createComment(review_id,newComment);
      setMessageComment("successfully posted!")

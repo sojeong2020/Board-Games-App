@@ -10,6 +10,7 @@ import SingleReview from './components/SingleReview';
 import Comments from './components/Comments';
 import Users from './components/Users';
 import CreateComment from './components/CreateComment';
+import Delete from './components/Delete';
 
 function App() {
   const [user,setUser] = useState(
@@ -53,6 +54,10 @@ function App() {
         <Route exact path ="/reviews/:review_id/comments/add">
           <CreateComment user={user}/>
         </Route>
+
+      <Route exact path="/">
+        <Delete />
+      </Route>       
 
       </Switch>
 

@@ -57,6 +57,7 @@ export const createComment = (review_id,newComment)=>{
     .post(`/reviews/${review_id}/comments`,newComment)
     .then((response)=>{
         console.log("posting new comment")
+        console.log(response.data.comments)
         return response.data.comments;
     }).catch((err)=>{
         console.log(err.response.data)
@@ -74,14 +75,15 @@ export const patchReview = (review_id,patchVotes)=>{
 
 }
 
-/* export const deleteComment = (comment_id)=>{
+export const deleteComment = (comment_id)=>{
     return gamesApi
     .delete(`/comments/${comment_id}`)
     .then((response)=>{
         console.log("delete the comment")
-        return response.data.comments
+        console.log(response.data)
+        return response.data
     })
-} */
+} 
 
 
 
