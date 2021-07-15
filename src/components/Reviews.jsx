@@ -29,8 +29,8 @@ const Reviews = () => {
                                 <h2>{review.title}</h2>
                                 <Link to={`/reviews/${review.review_id}`}>
                                 <img className="Reviews_img" src={review.review_img_url} alt={review.title}></img>
-
                                 </Link>
+                                <p>{review.review_body}</p>
                             </li>
                             
                             
