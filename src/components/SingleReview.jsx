@@ -19,13 +19,14 @@ const SingleReview = () => {
     },[review_id])
 
     const incVotes=()=>{
+
         setVote((currVote)=>{
             return currVote + 1
         })
 
         const patchVotes={inc_votes: 1}
 
-    patchReview (review_id,patchVotes);
+       patchReview (review_id,patchVotes);
 
         
 
@@ -40,7 +41,8 @@ const SingleReview = () => {
             <p>Review by {review.owner}</p>
             <p>{review.review_body}</p>
             <p>votes : {review.votes +vote}</p>
-            <button onClick={incVotes}>I like it!</button> 
+            <button disabled={vote > 1} onClick={incVotes}>I like it!</button> 
+            {vote > 1 ? <p>already voted!</p>: null}
             
             <Link to ={`/reviews/${review.review_id}/comments`}>
                         See comments
