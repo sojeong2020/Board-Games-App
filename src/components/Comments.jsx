@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 const Comments = () => {
     const [comments,setComments] = useState([])
     const {review_id} =useParams();
-console.log(review_id)
 
     useEffect(()=>{
         getCommentsByReview(review_id).then((commentsFromAPi)=>{

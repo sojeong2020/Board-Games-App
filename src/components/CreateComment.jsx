@@ -6,20 +6,21 @@ import {Link} from 'react-router-dom';
 
 const CreateComment = () => {
  const [body, setBody]=useState("");
+ const [messageComment,setMessageComment]=useState(null);
 /*  const [votes,setVotes] =useState("");
  */
-
-
  const {user}=useContext(UserContext);
  const {review_id} =useParams();
+
  const handleSubmit=(e) =>{
      e.preventDefault()
-     
+
     const newComment = {
         username: user.username,
         body: body
     }
      createComment(review_id,newComment);
+     setMessageComment("successfully posted!")
         
 }
 
@@ -47,7 +48,8 @@ return (
         <br />
         <button>add</button>
         <br />
-        <Link to ={`/reviews/${review_id}`}>back to reviews</Link>
+        <p>{messageComment}</p>
+        <Link to ={`/reviews/${review_id}/comments`}>back to comments</Link>
 
      </form>
 

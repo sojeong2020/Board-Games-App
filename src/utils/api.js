@@ -59,18 +59,18 @@ export const createComment = (review_id,newComment)=>{
         console.log("posting new comment")
         return response.data.comments;
     }).catch((err)=>{
-        console.log(err)
+        console.log(err.response.data)
     })
 }
 
-export const deleteComment = (comment_id)=>{
+/* export const deleteComment = (comment_id)=>{
     return gamesApi
     .delete(`/comments/${comment_id}`)
     .then((response)=>{
         console.log("delete the comment")
         return response.data.comments
     })
-}
+} */
 
 
 
