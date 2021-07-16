@@ -2,8 +2,7 @@ import { useContext ,useState, useEffect} from 'react';
 import {UserContext} from '../contexts/User';
 import {Link} from 'react-router-dom';
 import { getUserByUsername } from '../utils/api';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faSearch} from '@fortawesome/free-solid-svg-icons'
+
  
   
 
@@ -25,17 +24,11 @@ const Header = () => {
         <section className="Header">
             <div className="Home">
             <Link to ="/">
-            <h2>Home <FontAwesomeIcon icon={faHome} /> </h2>
-            </Link>
-            </div>
-            <div>
-            <Link to="/reviews">
-            <h2>Reviews <FontAwesomeIcon icon={faSearch} /> </h2>
-            </Link>
-            </div>
-            <div>
             <h1>Board Games</h1>
+            </Link>
             </div>
+           
+            
             
              <div className="Home_link">
              <p><strong>Hello {userLogin.username}</strong></p>
