@@ -27,20 +27,10 @@ export const getReviews = (category) => {
 };
 
 export const getReviewsBySortBy =( sortedBy ) =>{
+
     let path=`/reviews?sort_by=${sortedBy.value}`;
-console.log(sortedBy)
-   /*  {
-        path += `?sort_by=${owner}`;
-    } else if(title){
-        path += `?sort_by=${title}`;
-
-    }else if(created_at){
-        path += `?sort_by=${created_at}`;
-
-    }else if(votes){
-        path += `?sort_by=${votes}`;
-
-    } */
+    //console.log(sortedBy)
+   
     return gamesApi
     .get(path)
     .then((response)=>{

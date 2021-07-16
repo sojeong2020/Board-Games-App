@@ -23,42 +23,21 @@ const SortBy = ({setReviews}) => {
            console.log(sortedReviewsFromApi);
 
         })
-
     },[sortedBy]) 
 
 
     return (
         <div>
-             <form onSubmit={handleSubmit}>
-                 
-                     
+            <form  value="submit" onSubmit={handleSubmit}>
                  <select onChange={handleChange}>
+                     <option value="filter">filter</option>
                     <option value="owner">owner</option>
                     <option value="title">title</option>
                     <option value="created_at">created_at</option>
                     <option value="votes">votes</option>
                  </select>  
-                 
-                 <input type="submit" value="submit" />
-             </form>
+            </form>
 
-             <ul>
-                 {
-                     /*  sortedReviews.map((review,idx)=>{
-                        
-                         return(
-                             <li key={idx}>
-                                 <p></p>
-                             </li>
-                         )
-                     }) */
-
-                  }
-             </ul>
-                
-                
-            
-            
         </div>
     );
 };
