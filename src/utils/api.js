@@ -74,6 +74,15 @@ export const getUsers = () =>{
         console.log(response.data.users)
         return response.data.users
     })
+}   
+
+export const getUserByUsername =(username)=>{
+    return gamesApi
+    .get(`/users/${username}`)
+    .then((response)=>{
+        console.log(response.data.user)
+        return response.data.user
+    })
 }
 
 export const createComment = (review_id,newComment)=>{

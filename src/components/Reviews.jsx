@@ -26,7 +26,7 @@ const Reviews = () => {
 
              <SortBy reviews={reviews}/>
 
-             <h1>{category ? `${category} reviews` : `all reviews`}</h1> 
+             <h1>{category ? `${category} reviews`:`All reviews`}</h1> 
 
             <ul>
                 {

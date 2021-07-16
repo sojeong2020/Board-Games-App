@@ -5,9 +5,10 @@ import { getReviewsBySortBy } from '../utils/api';
 const SortBy = ({reviews}) => {
     console.log(reviews)
     const [filterReviews,setFilterReview] = useState([]);
+    console.log(filterReviews)
 
     const handleChange=(event)=>{
-        setFilterReview({value: event.target.value})
+        setFilterReview({value:event.target.value})
     }
     const handleSubmit=(event)=>{
          event.preventDefault();
@@ -19,7 +20,7 @@ const SortBy = ({reviews}) => {
            setFilterReview(sortedReviewsFromApi)
         })
 
-    },[])
+    },[filterReviews])
 
 
     return (
@@ -35,8 +36,19 @@ const SortBy = ({reviews}) => {
                  </select>  
                  </label>
                  <input type="submit" value="submit" />
-
              </form>
+
+             <ul>
+                 {
+                     reviews.map((review)=>{
+                         if()
+                         return(
+                             <li></li>
+                         )
+                     })
+
+                 }
+             </ul>
                 
                 
             

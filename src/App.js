@@ -27,9 +27,11 @@ function App() {
   return (
     <UserContext.Provider value={{user,setUser}}>
     <div className="App">
-      <Header user={user}/>
+      <Header user={user}/>  
       <Nav />
       <Switch>
+        
+
         <Route exact path="/">
         <Home />
         </Route>
@@ -55,7 +57,7 @@ function App() {
         </Route>
 
         <Route exact path ="/users">
-        <Users setUser={setUser}/>
+        <Users setUser={setUser} />
         </Route>
 
         <Route exact path ="/reviews/:review_id/comments/add">
