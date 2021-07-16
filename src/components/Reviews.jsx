@@ -24,7 +24,7 @@ const Reviews = () => {
            
          <div className="Reviews_list">
 
-             <SortBy reviews={reviews}/>
+             <SortBy setReviews={setReviews}/>
 
              <h1>{category ? `${category} reviews`:`All reviews`}</h1> 
 
