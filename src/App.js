@@ -5,6 +5,7 @@ import './App.css';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import Header from './components/Header';
+import Categories from './components/Categories';
 import Reviews from './components/Reviews';
 import SingleReview from './components/SingleReview';
 import Comments from './components/Comments';
@@ -40,9 +41,17 @@ function App() {
         <Reviews />
         </Route>
 
-        <Route exact path="/reviews/category/:category">
-        <Reviews />
+        <Route exact path="/categories">
+          <Categories />
         </Route>
+
+        <Route exact path="/reviews/category/:category">
+          <Categories />
+        </Route>
+
+        {/* <Route exact path="/reviews/category/:category">
+        <Reviews />
+        </Route> */}
 
         <Route exact path="/reviews/sort_by">
           <SortBy />

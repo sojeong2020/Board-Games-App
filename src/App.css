@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
 .App {
+  font-family: 'Open Sans', sans-serif;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: min-content min-content auto min-content;

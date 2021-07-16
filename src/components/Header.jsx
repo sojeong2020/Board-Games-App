@@ -22,28 +22,31 @@ const Header = () => {
     })
 },[user.username])
     return (
-        <div className="Header">
+        <section className="Header">
             <div className="Home">
             <Link to ="/">
-            <h2>Home</h2>
-            <FontAwesomeIcon icon={faHome} />
+            <h2>Home <FontAwesomeIcon icon={faHome} /> </h2>
             </Link>
+            </div>
+            <div>
             <Link to="/reviews">
-            <h2>Reviews</h2>
-            <FontAwesomeIcon icon={faSearch} />
-
+            <h2>Reviews <FontAwesomeIcon icon={faSearch} /> </h2>
             </Link>
+            </div>
+            <div>
+            <h1>Board Games</h1>
             </div>
             
              <div className="Home_link">
-             <h2>Hello {userLogin.username}</h2>
+             <p><strong>Hello {userLogin.username}</strong></p>
+             </div>
+             <div>
              <img className="Header_userImg" src={userLogin.name}alt={userLogin.username}></img>
-           
-            </div> 
+             </div> 
             
            
             
-        </div>
+        </section>
     );
 };
 

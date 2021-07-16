@@ -18,7 +18,7 @@ const Users = () => {
 
     const handleSubmit=(e)=>{
         e.preventDefault()
-        setLoginMessage("You havesuccessfully logged in to Board Games Reviews!")
+        setLoginMessage("You have successfully logged in to Board Games Reviews!")
     }
 
     return (

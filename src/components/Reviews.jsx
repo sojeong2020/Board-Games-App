@@ -1,18 +1,17 @@
 import {useState,useEffect} from 'react';
-import { useParams } from 'react-router-dom';
 import { getReviews } from '../utils/api';
 import {Link} from 'react-router-dom'
 import SortBy from './SortBy';
+
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     const [isLoading, setIsLoading]=useState(true);
     const [hasError,setHasError]=useState(false);
 
-    const {category} = useParams();
 
    useEffect(()=>{
-       getReviews(category).then((reviewsFromApi)=>{
+       getReviews().then((reviewsFromApi)=>{
          console.log(reviewsFromApi)
         setReviews(reviewsFromApi) 
         setIsLoading(false);
@@ -22,10 +21,11 @@ const Reviews = () => {
            setIsLoading(false);
        })  
        
-    },[category]) 
+    },[]) 
 
     
    if(isLoading) return <p>Loading...</p>
+    
    if(hasError) return <p>Something went wrong :( </p>
     return (
         <main>
@@ -33,9 +33,10 @@ const Reviews = () => {
          <div className="Reviews_list">
 
              <SortBy setReviews={setReviews}/>
+             <h1>all reviews</h1>
 
-             <h1>{category ? `${category} reviews`:`All reviews`}</h1> 
-
+{/*              <h1>{category ? `${category} reviews`:`All reviews`}</h1> 
+ */}
             <ul>
                 {
                     reviews.map((review)=>{
