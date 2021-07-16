@@ -1,7 +1,7 @@
 .App {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: min-content min-content auto auto;
+  grid-template-rows: min-content min-content auto min-content;
   grid-template-areas:
     'header'
     'nav'
@@ -9,6 +9,7 @@
     'footer';
   min-height: 100vh;
   background-color: rgb(211, 233, 171);
+  text-align: center;
 }
 
 /* ..................Header,,,,............................. */
@@ -81,6 +82,12 @@
 
 .User_list {
   list-style: none;
+
+}
+
+/* ..................Users............................. */
+
+.Footer {
 
 }
 

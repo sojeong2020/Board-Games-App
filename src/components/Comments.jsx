@@ -19,6 +19,7 @@ const Comments = () => {
     return (
         <main>
             <h2>{comments.length === 0? "no comments": "comments"}</h2>
+        {console.log(review_id)}
             
             <ul className="Comments_list">
                 {comments.map((comment,idx)=>{

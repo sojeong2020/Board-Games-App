@@ -25,7 +25,7 @@ const Delete = ({commentId, commentAuthor, setComments, comments}) => {
        alert ("deleted!!")
 
     } else {
-        setMessageDelete("you need to log in!")
+        setMessageDelete("you can't delete this comment!")
  
     }
 }
