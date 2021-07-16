@@ -5,13 +5,12 @@ import { getUsers} from '../utils/api';
 const Users = () => {
     const [users, setUsers] = useState([]);
     const [loginMessage,setLoginMessage]=useState("")
-
+ 
     const {setUser} = useContext(UserContext);
 
     useEffect(()=>{
         getUsers().then((usersFromApi)=>{
-            console.log(usersFromApi)
-            setUsers(usersFromApi)
+                   setUsers(usersFromApi)
 
         })
 
@@ -24,14 +23,16 @@ const Users = () => {
 
     }
 
+ 
+
 
     return (
         <div>
         <h2>Users</h2>
-
+        <p>{loginMessage}</p>
          <ul>
              {
-                 users.map((user,idx)=>{
+                users.map((user,idx)=>{
                     
                      return(
                          

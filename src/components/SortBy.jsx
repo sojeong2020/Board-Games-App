@@ -30,7 +30,6 @@ const SortBy = ({setReviews}) => {
         <div>
             <form  value="submit" onSubmit={handleSubmit}>
                  <select onChange={handleChange}>
-                     <option value="filter">filter</option>
                     <option value="owner">owner</option>
                     <option value="title">title</option>
                     <option value="created_at">created_at</option>

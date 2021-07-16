@@ -18,7 +18,7 @@ const Comments = () => {
 
     return (
         <main>
-            <h2>{comments.length === 0? "no comment": "comments"}</h2>
+            <h2>{comments.length === 0? "no comments": "comments"}</h2>
             
             <ul className="Comments_list">
                 {comments.map((comment,idx)=>{
