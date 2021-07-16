@@ -1,13 +1,19 @@
 .App {
-  
-  text-align: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content min-content auto auto;
+  grid-template-areas:
+    'header'
+    'nav'
+    'content'
+    'footer';
   min-height: 100vh;
   background-color: rgb(211, 233, 171);
 }
 
 /* ..................Header,,,,............................. */
 
-.Header {
+.Header { 
   background-color: rgb(238, 206, 27);
   margin:0px;
   padding:3px;
@@ -69,6 +75,13 @@
 
 .Comments_list {
   list-style: none;
+}
+
+/* ..................Users............................. */
+
+.User_list {
+  list-style: none;
+
 }
 
 @media only screen and (min-width: 600px) {

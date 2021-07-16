@@ -6,19 +6,27 @@ import SortBy from './SortBy';
 
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
+    const [isLoading, setIsLoading]=useState(true);
+    const [hasError,setHasError]=useState(false);
+
     const {category} = useParams();
 
    useEffect(()=>{
        getReviews(category).then((reviewsFromApi)=>{
          console.log(reviewsFromApi)
-        
-           setReviews(reviewsFromApi)
+        setReviews(reviewsFromApi) 
+        setIsLoading(false);
+       })
+       .catch((err)=>{
+           setHasError(true);
+           setIsLoading(false);
        })  
        
     },[category]) 
 
     
-
+   if(isLoading) return <p>Loading...</p>
+   if(hasError) return <p>Something went wrong :( </p>
     return (
         <main>
            
@@ -27,7 +35,6 @@ const Reviews = () => {
              <SortBy setReviews={setReviews}/>
 
              <h1>{category ? `${category} reviews`:`All reviews`}</h1> 
-             <h1>{category }</h1>
 
             <ul>
                 {

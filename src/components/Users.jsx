@@ -19,18 +19,15 @@ const Users = () => {
     const handleSubmit=(e)=>{
         e.preventDefault()
         setLoginMessage("You havesuccessfully logged in to Board Games Reviews!")
-
-
     }
 
- 
-
-
     return (
-        <div>
+        <section className="Users">
+
         <h2>Users</h2>
         <p>{loginMessage}</p>
-         <ul>
+
+         <ul className="User_list">
              {
                 users.map((user,idx)=>{
                     
@@ -47,7 +44,7 @@ const Users = () => {
                  })
              }
          </ul>
-        </div>
+        </section>
     );
 };
 
