@@ -9,6 +9,7 @@ const CreateComment = () => {
  const [messageComment,setMessageComment]=useState(null);
 
  const {user}=useContext(UserContext);
+ console.log(user,"user")
  const {review_id} =useParams();
 
  const handleSubmit=(e) =>{
@@ -18,8 +19,17 @@ const CreateComment = () => {
         username: user.username,
         body: body,
     }
-     createComment(review_id,newComment);
-     setMessageComment("successfully posted!")
+    if(user.username !=='who'){
+        createComment(review_id,newComment);
+
+        setMessageComment("successfully posted!")
+   
+
+    }else{
+        setMessageComment("need to log in first!")
+
+    }
+     
         
 }
 

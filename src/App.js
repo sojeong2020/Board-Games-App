@@ -19,9 +19,9 @@ import SortBy from './components/SortBy';
 function App() {
   const [user,setUser] = useState(
     {
-    "username": "mallionaire",
+    "username": "who",
     "avatar_url": "haz",
-    "name": "https://www.healthytherapies.com/wp-content/uploads/2016/06/Lime3.jpg"
+    "name": "https://www.healthytherapies.com/wp-content/uploads/2016/06/Lime3.jpg" 
     }
     );
 

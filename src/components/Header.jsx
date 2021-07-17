@@ -31,7 +31,7 @@ const Header = () => {
             
             
              <div className="Home_link">
-             <p><strong>Hello {userLogin.username}</strong></p>
+             <p><strong>{userLogin.username? `Hello ${userLogin.username}`: `Hi there!`}</strong></p>
              </div>
              <div>
              <img className="Header_userImg" src={userLogin.name}alt={userLogin.username}></img>
