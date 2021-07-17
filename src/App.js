@@ -58,7 +58,7 @@ function App() {
         </Route>
 
         <Route exact path="/reviews/:review_id">
-          <SingleReview />
+          <SingleReview loginUser={user}/>
         </Route>
 
         <Route exact path ="/reviews/:review_id/comments">

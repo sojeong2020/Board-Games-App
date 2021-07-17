@@ -26,19 +26,26 @@ const Categories = () => {
    
  return (
         <section>
-              { categories.map((category)=>{
+            <ul>
+            { categories.map((category)=>{
                      return(
+                         <li key={category.slug}>
                         <Link to={`/reviews/category/${category.slug}`}>
                          <p>{category.slug}</p> 
                         </Link>
+                         </li>
+                       
                            
                     );
                  })
             } 
-            <h1>reviews by </h1>
-            {reviewsByCategory.map((review,idx)=>{
+            </ul>
+              
+            <h2>Reviews by {category}</h2>
+            <ul>
+            {reviewsByCategory.map((review)=>{
                 return (
-                    <li key={idx}>
+                    <li key={review.title}>
                         <p>{review.title}</p>
                         <Link to={`/reviews/${review.review_id}`}>
                         <img className="Reviews_img" src={review.review_img_url} alt={review.title}></img>
@@ -47,6 +54,8 @@ const Categories = () => {
                     </li>
                 )
             })} 
+            </ul>
+            
         </section>
     );
 };
