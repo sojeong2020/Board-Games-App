@@ -25,12 +25,13 @@ const Categories = () => {
     },[category])
    
  return (
-        <section>
+     <main>
+        <section className="Category_list">
             <ul>
             { categories.map((category)=>{
                      return(
                          <li key={category.slug}>
-                        <Link to={`/reviews/category/${category.slug}`}>
+                        <Link className='Text-link' to={`/reviews/category/${category.slug}`}>
                          <p>{category.slug}</p> 
                         </Link>
                          </li>
@@ -40,14 +41,16 @@ const Categories = () => {
                  })
             } 
             </ul>
-              
+        </section>
+
+        <section className="Reviews_category">      
             <h2>Reviews by {category}</h2>
             <ul>
             {reviewsByCategory.map((review)=>{
                 return (
                     <li key={review.title}>
                         <p>{review.title}</p>
-                        <Link to={`/reviews/${review.review_id}`}>
+                        <Link className='Text-link' to={`/reviews/${review.review_id}`}>
                         <img className="Reviews_img" src={review.review_img_url} alt={review.title}></img>
                         </Link>
                         <p>{review.review_body}</p>
@@ -57,6 +60,7 @@ const Categories = () => {
             </ul>
             
         </section>
+        </main>
     );
 };
 

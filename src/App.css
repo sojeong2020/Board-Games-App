@@ -15,6 +15,14 @@
   text-align: center;
 }
 
+.Text-link {
+  text-decoration: none;
+  color: inherit;
+}
+.Text-link:hover {
+  color:brown;
+}
+
 /* ..................Header,,,,............................. */
 
 .Header { 
@@ -24,13 +32,15 @@
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
 
 }
-.Header_userImg {
+/* .Header_userImg {
   width:50px;
   height:50px;
   border-radius: 100%;
-}
+} */
 .Home {
   margin-left: 20px;
 }
@@ -49,10 +59,9 @@
 }
 .Nav h2{
   display: inline;
-  margin: 10px;
+  margin: 10px 20px;
 
 }
-
 
 /* ..................Reviews............................. */
 
@@ -75,6 +84,16 @@
   height:320px;
 }
 
+/* ..................Categories............................. */
+
+.Category_list li {
+ list-style: none;
+}
+
+.Reviews_category li {
+  list-style: none;
+}
+
 /* ..................Comments............................. */
 
 .Comments_list {
@@ -88,12 +107,16 @@
 
 }
 
-/* ..................Users............................. */
+/* ..................Footer............................. */
 
 .Footer {
 
 }
 
 @media only screen and (min-width: 600px) {
+  .Nav {
+    justify-content: space-around;
+  }
+  
 
 }

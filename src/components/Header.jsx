@@ -21,9 +21,9 @@ const Header = () => {
     })
 },[user.username])
     return (
-        <section className="Header">
+        <header className="Header">
             <div className="Home">
-            <Link to ="/">
+            <Link className='Text-link' to ="/">
             <h1>Board Games</h1>
             </Link>
             </div>
@@ -34,12 +34,12 @@ const Header = () => {
              <p><strong>{userLogin.username? `Hello ${userLogin.username}`: `Hi there!`}</strong></p>
              </div>
              <div>
-             <img className="Header_userImg" src={userLogin.name}alt={userLogin.username}></img>
-             </div> 
+{/*              <img className="Header_userImg" src={userLogin.name}alt={userLogin.username}></img>
+ */}             </div> 
             
            
             
-        </section>
+        </header>
     );
 };
 

@@ -40,12 +40,7 @@ const SingleReview = () => {
         }else{
             setMessageVote("you need to log in!")
         }
-        
-
-      
-       
-    
-}
+    }
 
     return (
         <main className="Review">
