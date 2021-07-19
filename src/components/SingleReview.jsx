@@ -56,7 +56,7 @@ const SingleReview = () => {
             <p>{messageVote}</p>
 
             <button disabled={vote > 1} onClick={incVotes}>I like it!</button> 
-            {vote > 1 ? <p>already voted!</p>: null}
+            {vote > 1 ? <p>You have already voted!</p>: null}
  
             <Link to ={`/reviews/${review.review_id}/comments`}>
                        <p>See comments</p> 
