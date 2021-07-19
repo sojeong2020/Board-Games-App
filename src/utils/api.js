@@ -98,6 +98,16 @@ export const patchReview = (review_id,patchVotes)=>{
 
 }
 
+export const patchComment =(comment_id, newVote)=>{
+    return gamesApi
+    .patch(`comments/${comment_id}`,newVote)
+    .then((response)=>{
+        console.log("patching comment")
+        console.log(response.data)
+        return response.data
+    })
+}
+
 export const deleteComment = (comment_id)=>{
     return gamesApi
     .delete(`/comments/${comment_id}`)

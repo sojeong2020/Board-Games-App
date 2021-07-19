@@ -24,8 +24,8 @@ const Users = () => {
     return (
         <section className="Users">
 
-        <h2>Users</h2>
-        <p>{loginMessage}</p>
+        <h2>Select a user,please!</h2>
+        <h3>{loginMessage}</h3>
 
          <ul className="User_list">
              {
@@ -36,7 +36,7 @@ const Users = () => {
                          <li key={idx}>
                              <p>{user.username}</p>
                              <form onSubmit={handleSubmit}>
-                             <button onClick={()=>{setUser(user)}}>log in</button>
+                             <button onClick={()=>{setUser(user)}}>select</button>
                              </form>
 
                          </li>

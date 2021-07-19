@@ -9,6 +9,7 @@ const Categories = () => {
     const [categories, setCategories] = useState([]);
     const [reviewsByCategory, setReviewsByCategory]=useState([]);
     const {category} =useParams();
+    console.log(category,"category")
    
     useEffect(()=>{
         getCategories().then((categoriesFromApi)=>{

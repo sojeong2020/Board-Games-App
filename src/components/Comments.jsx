@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react';
-import { getCommentsByReview } from '../utils/api';
+import { getCommentsByReview, patchComment } from '../utils/api';
 import { useParams } from 'react-router-dom';
 import Delete from './Delete';
+import SingleComment from './SingleComment';
 
 
 
@@ -15,6 +16,8 @@ const Comments = () => {
             setComments(commentsFromAPi)
         })
     },[review_id]) 
+
+
 
     return (
         <main>
@@ -30,11 +33,13 @@ const Comments = () => {
                             <p>{comment.created_at}</p>
                             <p>{comment.body}</p>
                             <p>Vote :{comment.votes}</p>
-                            <Delete  commentId={comment.comment_id}
+                        <SingleComment />
+
+                        <Delete  commentId={comment.comment_id}
                                      commentAuthor={comment.author}
                                      setComments={setComments}
                                      comments={comments}
-                                    />
+                        />
 
                         </li>
                     )

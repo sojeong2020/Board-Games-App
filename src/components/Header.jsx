@@ -28,8 +28,7 @@ const Header = () => {
             </Link>
             </div>
            
-            
-            
+            <span> </span>
              <div className="Home_link">
              <p><strong>{userLogin.username? `Hello ${userLogin.username}`: `Hi there!`}</strong></p>
              </div>
