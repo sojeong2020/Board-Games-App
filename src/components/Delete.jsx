@@ -2,6 +2,9 @@ import {useState,useContext} from 'react';
 import { deleteComment } from '../utils/api';
 import { UserContext } from '../contexts/User';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt} from '@fortawesome/free-solid-svg-icons'
+
 
 const Delete = ({commentId, commentAuthor, setComments, comments}) => {
     console.log(commentId)
@@ -32,8 +35,8 @@ const Delete = ({commentId, commentAuthor, setComments, comments}) => {
     
     return (
         <section>
+       <button onClick={handleClick}><FontAwesomeIcon style = {{color: 'green'}} icon={faTrashAlt} /></button>
 
-       <button onClick={handleClick}>delete</button>
         <p>{messageDelete}</p>    
         </section>
     );

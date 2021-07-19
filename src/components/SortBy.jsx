@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react';
 import { getReviewsBySortBy } from '../utils/api';
-import Dropdown from 'react-bootstrap/Dropdown';
 
 
 
@@ -40,21 +39,7 @@ const SortBy = ({setReviews}) => {
                  </select>  
             </form> 
 
-            <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-             Filter
-            </Dropdown.Toggle>
-
-            <form  value="submit" onSubmit={handleSubmit}>
-            <Dropdown.Menu onChange={handleChange}>
-            <Dropdown.Item value="owner">owner</Dropdown.Item>
-            <Dropdown.Item value="title">title</Dropdown.Item>
-            <Dropdown.Item value="created_at">created_at</Dropdown.Item>
-            <Dropdown.Item value="votes">votes</Dropdown.Item>
-
-            </Dropdown.Menu>
-            </form>
-            </Dropdown>
+            
 
         </div>
         

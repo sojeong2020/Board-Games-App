@@ -2,6 +2,10 @@ import {useState,useContext} from 'react';
 import { patchComment } from '../utils/api';
 import {UserContext} from '../contexts/User';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
+
+
 const SingleComment = ({singleComment,comment_id}) => {
     const [vote,setVote] = useState(0)
     const [messageCommentVote,setCommentVote]=useState("")
@@ -30,8 +34,8 @@ const SingleComment = ({singleComment,comment_id}) => {
     return (
         <div>
         <p>Vote :{singleComment.votes + vote}</p>
-        <button disabled={vote > 1} onClick={incVotes}>I like it</button>
-        {vote > 1? <p>You can vote only one time.thanks!</p> : null}
+        <button disabled={vote > 1} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></button>
+        {vote > 1? <p>You can vote only one time.</p> : null}
         <p>{messageCommentVote}</p>
         </div>
     );

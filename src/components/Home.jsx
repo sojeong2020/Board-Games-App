@@ -9,7 +9,7 @@ const Home = () => {
         </div>
 
         <div>
-            <Link to ="/users">
+            <Link className="Text-link" to ="/users">
             <h2>Log in</h2>
             </Link>
         </div>

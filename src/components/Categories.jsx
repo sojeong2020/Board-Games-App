@@ -58,7 +58,7 @@ const Categories = () => {
                         <Link className='Text-link' to={`/reviews/${review.review_id}`}>
                         <img className="ReviewByCategory_img" src={review.review_img_url} alt={review.title}></img>
                         </Link>
-                        <p>{review.review_body}</p>
+                        <p className="Reviews_body">{review.review_body}</p>
                         <Link className='Text-link' to={`/reviews/${review.review_id}`}>
                             <p><srtong>Read more</srtong></p>
                         </Link>
