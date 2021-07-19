@@ -23,6 +23,10 @@
   color:brown;
 }
 
+.Container {
+  padding:20px;
+}
+
 /* ..................Header,,,,............................. */
 
 .Header { 
@@ -93,6 +97,14 @@
 .Reviews_category li {
   list-style: none;
 }
+
+.ReviewByCategory_img {
+  width:320px;
+  height:320px;
+  border-radius: 100%;
+
+}
+
 
 /* ..................Comments............................. */
 

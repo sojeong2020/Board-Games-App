@@ -28,12 +28,13 @@ const Categories = () => {
  return (
      <main>
         <section className="Category_list">
+            <div className="Container">
             <ul>
             { categories.map((category)=>{
                      return(
                          <li key={category.slug}>
                         <Link className='Text-link' to={`/reviews/category/${category.slug}`}>
-                         <p>{category.slug}</p> 
+                         <h2>{category.slug}</h2> 
                         </Link>
                          </li>
                        
@@ -42,23 +43,31 @@ const Categories = () => {
                  })
             } 
             </ul>
+            </div>
+           
         </section>
 
         <section className="Reviews_category">      
-            <h2>Reviews by {category}</h2>
+            <h1> {category? `Reviews by ${category}`: null}</h1>
+            <div className="Container">
             <ul>
             {reviewsByCategory.map((review)=>{
                 return (
                     <li key={review.title}>
-                        <p>{review.title}</p>
+                        <h3>{review.title}</h3>
                         <Link className='Text-link' to={`/reviews/${review.review_id}`}>
-                        <img className="Reviews_img" src={review.review_img_url} alt={review.title}></img>
+                        <img className="ReviewByCategory_img" src={review.review_img_url} alt={review.title}></img>
                         </Link>
                         <p>{review.review_body}</p>
+                        <Link className='Text-link' to={`/reviews/${review.review_id}`}>
+                            <p><srtong>Read more</srtong></p>
+                        </Link>
                     </li>
                 )
             })} 
             </ul>
+            </div>
+           
             
         </section>
         </main>

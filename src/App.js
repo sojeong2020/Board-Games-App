@@ -73,7 +73,7 @@ function App() {
         <Delete user={user}/>
       </Route> 
 
-      <Route exact path="/comments/comment/:comment_id">
+      <Route exact path="/:comment_id">
         <SingleComment user={user}/>
       </Route> 
 

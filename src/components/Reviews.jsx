@@ -3,7 +3,6 @@ import { getReviews } from '../utils/api';
 import {Link} from 'react-router-dom'
 import SortBy from './SortBy';
 
-
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     const [isLoading, setIsLoading]=useState(true);
@@ -35,8 +34,7 @@ const Reviews = () => {
              <SortBy setReviews={setReviews}/>
              <h1>all reviews</h1>
 
-{/*              <h1>{category ? `${category} reviews`:`All reviews`}</h1> 
- */}
+
             <ul>
                 {
                     reviews.map((review)=>{
@@ -47,7 +45,11 @@ const Reviews = () => {
                                 <Link to={`/reviews/${review.review_id}`}>
                                 <img className="Reviews_img" src={review.review_img_url} alt={review.title}></img>
                                 </Link>
+                                
                                 <p>{review.review_body}</p>
+                                <Link to={`/reviews/${review.review_id}`}>
+                                <p>Read more</p>
+                                </Link>
                             </li>
                         )
                     })

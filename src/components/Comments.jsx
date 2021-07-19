@@ -33,7 +33,8 @@ const Comments = () => {
                             <p>{comment.created_at}</p>
                             <p>{comment.body}</p>
                             {/* <p>Vote :{comment.votes + vote}</p> */}
-                        <SingleComment singleComment={comment}/>
+                        <SingleComment singleComment={comment}
+                                       comment_id={comment.comment_id}/>
 
                         <Delete  commentId={comment.comment_id}
                                      commentAuthor={comment.author}

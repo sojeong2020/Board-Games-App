@@ -1,17 +1,17 @@
 import {useState} from 'react';
 import { patchComment } from '../utils/api';
-import {useParams} from 'react-router-dom'
 
-const SingleComment = ({singleComment}) => {
+const SingleComment = ({singleComment,comment_id}) => {
     const [vote,setVote] = useState(0)
-    const {comment_id} = useParams();
 
 
     const incVotes = ()=>{
         setVote((currVote)=>{
             return currVote +1
         })
-        const newVote = {inc_votes: 1}
+        
+        const newVote = {inc_votes: vote}
+    
         patchComment(comment_id,newVote)
         
     }   
