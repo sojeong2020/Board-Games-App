@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { getCommentsByReview, patchComment } from '../utils/api';
+import { getCommentsByReview} from '../utils/api';
 import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import SingleComment from './SingleComment';
@@ -32,8 +32,8 @@ const Comments = () => {
                             <p>Author : {comment.author}</p>
                             <p>{comment.created_at}</p>
                             <p>{comment.body}</p>
-                            <p>Vote :{comment.votes}</p>
-                        <SingleComment />
+                            {/* <p>Vote :{comment.votes + vote}</p> */}
+                        <SingleComment singleComment={comment}/>
 
                         <Delete  commentId={comment.comment_id}
                                      commentAuthor={comment.author}
