@@ -3,6 +3,7 @@ import { getCommentsByReview} from '../utils/api';
 import { useParams } from 'react-router-dom';
 import Delete from './Delete';
 import SingleComment from './SingleComment';
+import {Link} from 'react-router-dom';
 
 
 
@@ -41,12 +42,15 @@ const Comments = () => {
                                      setComments={setComments}
                                      comments={comments}
                         />
-
                         </li>
                     )
                     
                 })}
             </ul>
+            <Link to={`/reviews/${review_id}`}>
+            <p>previous page</p>
+
+            </Link>
             
         </main>
     );
