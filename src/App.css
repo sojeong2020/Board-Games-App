@@ -30,9 +30,18 @@
 
 /* ..................Home,,,,............................. */
 
-.Home_img {
-  background-size: contain;
-background-repeat: no-repeat;
+.Login_home{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./img/dice.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  
+}
+.Welcome {
+  margin-bottom: 80px;
+  margin-top:30px;
 }
 
 /* ..................Header,,,,............................. */
@@ -70,6 +79,8 @@ background-repeat: no-repeat;
   width: 100%;
   padding:7px;
   color:rgb(51, 45, 12);
+  margin-bottom:0;
+
 
 }
 .Nav h2{
@@ -145,6 +156,9 @@ font-size: 1.2rem;
 @media only screen and (min-width: 600px) {
   .Nav {
     justify-content: space-around;
+  }
+  .Login_home {
+    font-size: 1.5rem;
   }
   
 

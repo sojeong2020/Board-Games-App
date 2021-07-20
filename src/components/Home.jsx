@@ -1,24 +1,23 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import dice from '../img/dice.png';
 
 const Home = () => {
     return (
-        <main>
-            
-            <img className="Home_img" src={dice} alt="Dice" style={{ height: 100 }}  />
- *
-        <div>
+        <main className="Login_home">
+        <section >
+              
+ 
+        <div className="Welcome">
             <h2>WELCOME HOME</h2>
         </div>
 
-        <div>
+        <div className="Login_link">
             <Link className="Text-link" to ="/users">
-            <h2>Log in</h2>
+            <h2>Log in here!</h2>
             </Link>
         </div>
            
-        
+        </section> 
         </main>
         
     );

@@ -30,7 +30,7 @@ const Header = () => {
            
             <span> </span>
              <div className="Home_link">
-             <p><strong>{userLogin.username? `Hello ${userLogin.username}`: `Hi there!`}</strong></p>
+             <h2>{userLogin.username? `Hello  ${userLogin.username}`: `Hi there!`}</h2>
              </div>
              <div>
 {/*              <img className="Header_userImg" src={userLogin.name}alt={userLogin.username}></img>

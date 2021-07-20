@@ -34,8 +34,8 @@ const SingleComment = ({singleComment,comment_id}) => {
     return (
         <div>
         <p>Vote :{singleComment.votes + vote}</p>
-        <button disabled={vote > 1} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></button>
-        {vote > 1? <p style={{color: "brown"}}>You can vote only one time.</p> : null}
+        <button disabled={vote > 0} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></button>
+        {vote===1 ? <p style={{color: "brown"}}>You can vote only one time.</p> : null}
         <p style={{color: "red"}}>{messageCommentVote}</p>
         </div>
     );
