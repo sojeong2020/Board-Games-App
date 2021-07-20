@@ -37,7 +37,7 @@ const Delete = ({commentId, commentAuthor, setComments, comments}) => {
         <section>
        <button onClick={handleClick}><FontAwesomeIcon style = {{color: 'green'}} icon={faTrashAlt} /></button>
 
-        <p>{messageDelete}</p>    
+        <p style={{color: "red"}}>{messageDelete}</p>    
         </section>
     );
 };

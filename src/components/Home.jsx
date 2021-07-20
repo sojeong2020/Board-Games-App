@@ -1,9 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import dice from '../img/dice.png';
 
 const Home = () => {
     return (
         <main>
+            
+            <img className="Home_img" src={dice} alt="Dice" style={{ height: 100 }}  />
+ *
         <div>
             <h2>WELCOME HOME</h2>
         </div>
@@ -13,6 +17,8 @@ const Home = () => {
             <h2>Log in</h2>
             </Link>
         </div>
+           
+        
         </main>
         
     );

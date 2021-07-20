@@ -28,6 +28,13 @@
   padding:20px;
 }
 
+/* ..................Home,,,,............................. */
+
+.Home_img {
+  background-size: contain;
+background-repeat: no-repeat;
+}
+
 /* ..................Header,,,,............................. */
 
 .Header { 

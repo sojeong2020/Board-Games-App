@@ -56,16 +56,16 @@ const SingleReview = () => {
             <p className="Reviews_body">{review.review_body}</p>
 
             <p>votes : {review.votes +vote}</p>
-            <p>{messageVote}</p>
+            <p style={{color: "red"}}>{messageVote}</p>
 
             <button disabled={vote > 1} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}}  icon={faThumbsUp} /></button> 
-            {vote > 1 ? <p>You have already voted!</p>: null}
+            {vote > 1 ? <p style={{color: "brown"}}>You have already voted!</p>: null}
  
             <Link to ={`/reviews/${review.review_id}/comments`}>
                        <p>See comments</p> 
             </Link>
             </div>
-
+ 
             <div>
             <Link to ={`/reviews/${review.review_id}/comments/add`}>
                  <p>Add comment</p>

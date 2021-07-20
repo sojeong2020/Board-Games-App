@@ -35,8 +35,8 @@ const SingleComment = ({singleComment,comment_id}) => {
         <div>
         <p>Vote :{singleComment.votes + vote}</p>
         <button disabled={vote > 1} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></button>
-        {vote > 1? <p>You can vote only one time.</p> : null}
-        <p>{messageCommentVote}</p>
+        {vote > 1? <p style={{color: "brown"}}>You can vote only one time.</p> : null}
+        <p style={{color: "red"}}>{messageCommentVote}</p>
         </div>
     );
 };

@@ -47,7 +47,7 @@ return (
         <br />
         <button>add</button>
         <br />
-        <p>{messageComment}</p>
+        <p style={{color: "red"}}>{messageComment}</p>
         <Link to ={`/reviews/${review_id}/comments`}>back to comments</Link>
 
      </form>
