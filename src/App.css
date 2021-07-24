@@ -52,7 +52,7 @@
   padding:3px;
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: baseline;
   width: 100%;
   color:rgb(233, 215, 158);
@@ -158,8 +158,14 @@ font-size: 1.2rem;
  background-color: rgb(98, 122, 30);
  border-radius: 5px;
  border: #fff;
-
  padding:2px 8px;
+}
+.Create_comment {
+ margin-top: 20px;
+}
+.Create_add {
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 /* ..................Delete............................. */
@@ -171,7 +177,15 @@ font-size: 1.2rem;
 
 
 /* ..................Users............................. */
-
+.Users {
+  margin-top:20px;
+}
+.Users h1 {
+  margin-bottom:20px;
+}
+.Username {
+  margin:30px;
+}
 .User_list {
   list-style: none;
 
@@ -181,6 +195,17 @@ font-size: 1.2rem;
   font-family: 'Indie Flower', cursive;
 
 }
+.Custom_btn_user {
+  background-color: rgb(76, 77, 30) !important;
+  border: #fff !important;
+}
+
+/* ....................SortBy............................ */
+
+.Sort {
+  margin-top: 20px;
+}
+
 
 /* ..................Footer............................. */
 
@@ -193,6 +218,9 @@ font-size: 1.2rem;
   .Login_home {
     font-size: 1.5rem;
   }
-  
+  .Create_comment{
+    font-size: 1.5rem;
+
+  } 
 
 }

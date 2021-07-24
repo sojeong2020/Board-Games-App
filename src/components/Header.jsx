@@ -10,8 +10,7 @@ const Header = () => {
     const {user} = useContext(UserContext);
     const [userLogin,setUserLogin]=useState("");
 
-    console.log(user)
-    console.log(userLogin)
+    
 
     useEffect(()=>{
     getUserByUsername(user.username).then((userFromApi)=>{
@@ -28,13 +27,11 @@ const Header = () => {
             </Link>
             </div>
            
-            <span> </span>
+            <div></div>
              <div className="Home_link">
-             <h2>{userLogin.username? `Hello  ${userLogin.username}`: `Hi there!`}</h2>
+             <h2>{userLogin.username? `Hello ${userLogin.username}`: `Hi there!`}</h2>
              </div>
-             <div>
-{/*              <img className="Header_userImg" src={userLogin.name}alt={userLogin.username}></img>
- */}             </div> 
+             
             
            
             

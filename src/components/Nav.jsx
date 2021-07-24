@@ -8,9 +8,7 @@ const Nav = () => {
    
     return (
        <nav className="Nav">
-            <Link className='Text-link' to ="/">
-            <h2><FontAwesomeIcon icon={faUser} /> </h2>
-            </Link>
+            
 
             <div className="Nav_links">
             <Link className='Text-link' to="/reviews">
@@ -20,6 +18,11 @@ const Nav = () => {
             <h2>Category</h2>
             </Link>
             </div>
+            <div></div>
+
+            <Link className='Text-link' to ="/">
+            <h2>Log In <FontAwesomeIcon icon={faUser} /> </h2>
+            </Link>
        </nav>   
     );
 };

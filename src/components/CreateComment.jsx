@@ -37,6 +37,7 @@ const CreateComment = () => {
 }
 
 return (
+    <div className="Create_comment">
     <Container>
     <Form onSubmit={handleSubmit}>
         <Form.Group>
@@ -49,8 +50,9 @@ return (
         <Form.Text> {messageComment} </Form.Text>
 
         </Form.Group>
+        <div className="Create_add">
         <Button  type="submit" className="Button_add">add</Button>
-
+        </div>
         <Form.Group>
         <Link to ={`/reviews/${review_id}/comments`}>
         <Form.Text>  back to comments </Form.Text>
@@ -62,6 +64,7 @@ return (
      </Form>
 
      </Container>
+     </div>
 
     );
 };

@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react';
 import { getReviewsBySortBy } from '../utils/api';
+import  { Form}  from 'react-bootstrap';
+
 
 
 
@@ -28,18 +30,18 @@ const SortBy = ({setReviews}) => {
 
 
     return (
-        <div>
+        <div className="Sort">
             
-             <form  value="submit" onSubmit={handleSubmit}>
+              <form  value="submit" onSubmit={handleSubmit}>
                  <select onChange={handleChange}>
                     <option value="owner">owner</option>
                     <option value="title">title</option>
                     <option value="created_at">created_at</option>
                     <option value="votes">votes</option>
                  </select>  
-            </form> 
+            </form>   
 
-            
+
 
         </div>
         
