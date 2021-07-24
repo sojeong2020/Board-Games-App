@@ -93,23 +93,15 @@
 }
 
 /* ..................Reviews............................. */
-
-.Reviews_list {
-  display: block;
-  padding:0 35px 0 10px;
-}
+ 
 .Reviews_list li {
   list-style: none;
+  margin-bottom: 20px;
+  margin-left: -25px;
 
 }
-.Reviews_img {
- width:320px;
- height:320px;
-}
-.Reviews_body {
-padding: 30px;
-font-size: 1.2rem;
-}
+
+
 
 /* ..................SingleReview............................. */
 
@@ -222,5 +214,8 @@ font-size: 1.2rem;
     font-size: 1.5rem;
 
   } 
+  .Reviews_list {
+    margin:30px 100px;
+  }
 
 }
