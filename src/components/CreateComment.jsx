@@ -3,6 +3,8 @@ import { UserContext } from '../contexts/User';
 import { createComment } from '../utils/api'
 import { useParams } from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import  {Container, Form, Button}  from 'react-bootstrap';
+
 
 
 const CreateComment = () => {
@@ -35,23 +37,31 @@ const CreateComment = () => {
 }
 
 return (
-    
-    <form onSubmit={handleSubmit}>
+    <Container>
+    <Form onSubmit={handleSubmit}>
+        <Form.Group>
         {user.username !== 'who' ? <p>author {user.username}</p>: null }
-        <br />
-        <label> comment: </label>
-          <textarea
-                required
+        <Form.Label> comment </Form.Label>
+        <Form.Control as="textarea" rows={5} required
                 value={body}
-                onChange={(e)=> setBody(e.target.value)}
-            ></textarea>
-        <br />
-        <button className="Button_add">add</button>
-        <br />
-        <p style={{color: "red"}}>{messageComment}</p>
-        <Link to ={`/reviews/${review_id}/comments`}>back to comments</Link>
+                onChange={(e)=> setBody(e.target.value)}/>
+         
+        <Form.Text> {messageComment} </Form.Text>
 
-     </form>
+        </Form.Group>
+        <Button  type="submit" className="Button_add">add</Button>
+
+        <Form.Group>
+        <Link to ={`/reviews/${review_id}/comments`}>
+        <Form.Text>  back to comments </Form.Text>
+            </Link>
+        </Form.Group>
+       
+
+
+     </Form>
+
+     </Container>
 
     );
 };
