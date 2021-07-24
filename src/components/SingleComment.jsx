@@ -4,6 +4,8 @@ import {UserContext} from '../contexts/User';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
+import  Button  from 'react-bootstrap/Button';
+
 
 
 const SingleComment = ({singleComment,comment_id}) => {
@@ -18,7 +20,7 @@ const SingleComment = ({singleComment,comment_id}) => {
             setVote((currVote)=>{
                 return currVote +1
             })
-            const newVote = {inc_votes: 1}
+            const newVote = {inc_votes: 0}
     
             patchComment(comment_id,newVote)
             setCommentVote(`thanks! ${user.username}`)
@@ -34,11 +36,10 @@ const SingleComment = ({singleComment,comment_id}) => {
     return (
         <div>
         <p>Vote :{singleComment.votes + vote}</p>
-        <button disabled={vote > 0} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></button>
-        {vote===1 ? <p style={{color: "brown"}}>You can vote only one time.</p> : null}
+        <Button  className="Custom-btn-comment" disabled={vote > 0} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button>
         <p style={{color: "red"}}>{messageCommentVote}</p>
         </div>
     );
-};
+}; 
 
 export default SingleComment;

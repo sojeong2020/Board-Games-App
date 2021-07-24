@@ -1,6 +1,7 @@
 import {useState, useEffect, useContext} from 'react';
 import { UserContext } from '../contexts/User';
 import { getUsers} from '../utils/api';
+import  Button  from 'react-bootstrap/Button';
  
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -36,7 +37,7 @@ const Users = () => {
                          <li key={idx}>
                              <h2>{user.username}</h2>
                              <form onSubmit={handleSubmit}>
-                             <button onClick={()=>{setUser(user)}}>select</button>
+                             <Button onClick={()=>{setUser(user)}}>select</Button>
                              </form>
 
                          </li>

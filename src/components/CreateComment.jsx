@@ -4,6 +4,7 @@ import { createComment } from '../utils/api'
 import { useParams } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
+
 const CreateComment = () => {
  const [body, setBody]=useState("");
  const [messageComment,setMessageComment]=useState(null);
@@ -36,7 +37,7 @@ const CreateComment = () => {
 return (
     
     <form onSubmit={handleSubmit}>
-        <p>author {user.username}</p>
+        {user.username !== 'who' ? <p>author {user.username}</p>: null }
         <br />
         <label> comment: </label>
           <textarea
@@ -45,7 +46,7 @@ return (
                 onChange={(e)=> setBody(e.target.value)}
             ></textarea>
         <br />
-        <button>add</button>
+        <button className="Button_add">add</button>
         <br />
         <p style={{color: "red"}}>{messageComment}</p>
         <Link to ={`/reviews/${review_id}/comments`}>back to comments</Link>

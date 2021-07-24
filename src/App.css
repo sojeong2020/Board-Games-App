@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 .App {
   font-family: 'Open Sans', sans-serif;
   display: grid;
@@ -69,6 +69,9 @@
 .Home_link {
   margin-right: 20px;
 }
+.Home_link h2 {
+  font-family: 'Indie Flower', cursive;
+}
 /* ..................Nav,,,,............................. */
 .Nav{
   background-color: rgb(233, 215, 158);
@@ -114,6 +117,10 @@ font-size: 1.2rem;
   width:320px;
   height:320px;
 }
+.Custom-btn-review {
+  background-color: rgb(240, 144, 107) !important;
+  border: #fff !important;
+}
 
 /* ..................Categories............................. */
 
@@ -139,6 +146,30 @@ font-size: 1.2rem;
   list-style: none;
 }
 
+/* ..................SingleComments............................. */
+
+.Custom-btn-comment {
+  background-color: rgb(216, 108, 113) !important;
+  border: #fff !important;
+}
+
+/* ..................CreateComments............................. */
+.Button_add {
+ background-color: rgb(98, 122, 30);
+ border-radius: 5px;
+ border: #fff;
+
+ padding:2px 8px;
+}
+
+/* ..................Delete............................. */
+
+.Custom-btn-delete {
+  background-color: rgb(52, 143, 247) !important;
+  border: #fff !important;
+}
+
+
 /* ..................Users............................. */
 
 .User_list {
@@ -147,6 +178,8 @@ font-size: 1.2rem;
 }
 .Login_msg {
   color:firebrick;
+  font-family: 'Indie Flower', cursive;
+
 }
 
 /* ..................Footer............................. */

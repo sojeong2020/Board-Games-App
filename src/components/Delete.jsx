@@ -4,6 +4,8 @@ import { UserContext } from '../contexts/User';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt} from '@fortawesome/free-solid-svg-icons'
+import  Button  from 'react-bootstrap/Button';
+
 
 
 const Delete = ({commentId, commentAuthor, setComments, comments}) => {
@@ -35,7 +37,7 @@ const Delete = ({commentId, commentAuthor, setComments, comments}) => {
     
     return (
         <section>
-       <button onClick={handleClick}><FontAwesomeIcon style = {{color: 'green'}} icon={faTrashAlt} /></button>
+       <Button className="Custom-btn-delete" onClick={handleClick}><FontAwesomeIcon style = {{color: 'black'}} icon={faTrashAlt} /></Button>
 
         <p style={{color: "red"}}>{messageDelete}</p>    
         </section>

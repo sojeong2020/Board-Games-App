@@ -60,7 +60,7 @@ const Categories = () => {
                         </Link>
                         <p className="Reviews_body">{review.review_body}</p>
                         <Link className='Text-link' to={`/reviews/${review.review_id}`}>
-                            <p><srtong>Read more</srtong></p>
+                            <p>Read more</p>
                         </Link>
                     </li>
                 )

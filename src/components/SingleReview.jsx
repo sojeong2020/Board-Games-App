@@ -8,6 +8,8 @@ import {Link} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
+import  Button  from 'react-bootstrap/Button';
+
 
 
 
@@ -29,13 +31,13 @@ const SingleReview = () => {
     },[review_id])
 
   
-    const incVotes=()=>{
+    const incVotes=(voting)=>{
         if(user.username !== "who"){
             setVote((currVote)=>{
-                return currVote + 1
+                return currVote + voting
             })
     
-            const patchVotes={inc_votes: 1}
+            const patchVotes={inc_votes: voting}
     
             patchReview (review_id,patchVotes);
 
@@ -58,9 +60,9 @@ const SingleReview = () => {
             <p>votes : {review.votes +vote}</p>
             <p style={{color: "red"}}>{messageVote}</p>
 
-            <button disabled={vote > 1} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}}  icon={faThumbsUp} /></button> 
-            {vote > 1 ? <p style={{color: "brown"}}>You have already voted!</p>: null}
- 
+            <Button className="Custom-btn-review" disabled={vote > 0} onClick={()=>{incVotes(1)}}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button> 
+
+
             <Link to ={`/reviews/${review.review_id}/comments`}>
                        <p>See comments</p> 
             </Link>

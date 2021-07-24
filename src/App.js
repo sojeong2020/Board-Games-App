@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 import {useState} from 'react';
 import {UserContext} from './contexts/User';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home';
 import Nav from './components/Nav';
 import Header from './components/Header';

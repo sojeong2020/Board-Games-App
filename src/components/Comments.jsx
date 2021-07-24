@@ -33,8 +33,7 @@ const Comments = () => {
                         <li key={idx}>
                             <p>Author : {comment.author}</p>
                             <p>{comment.created_at}</p>
-                            <p>{comment.body}</p>
-                            {/* <p>Vote :{comment.votes + vote}</p> */}
+                            <p>comment: {comment.body}</p>
                         <SingleComment singleComment={comment}
                                        comment_id={comment.comment_id}/>
 
