@@ -4,7 +4,7 @@ import {UserContext} from '../contexts/User';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
-import  {Card, Button}  from 'react-bootstrap';
+import  {Button}  from 'react-bootstrap';
 
 
 
@@ -13,7 +13,6 @@ const SingleComment = ({singleComment,comment_id}) => {
     const [messageCommentVote,setCommentVote]=useState("")
 
     const {user} =useContext(UserContext);
-   console.log(user.username)
 
     const incVotes = ()=>{
         if(user.username !== "who"){
@@ -35,16 +34,7 @@ const SingleComment = ({singleComment,comment_id}) => {
 
     return (
         <div>
-        
-            {/* <Card.Body>
-                <Card.Text>Vote :{singleComment.votes + vote}</Card.Text>
-                <Button  className="Custom-btn-comment" disabled={vote > 0} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button>
-                <Card.Text>{messageCommentVote}</Card.Text>
-
-            </Card.Body>
-             */}
-
-         <p>Vote :{singleComment.votes + vote}</p>
+        <p>Vote :{singleComment.votes + vote}</p>
         <Button  className="Custom-btn-comment" disabled={vote > 0} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button>
         <p style={{color: "red"}}>{messageCommentVote}</p> 
         

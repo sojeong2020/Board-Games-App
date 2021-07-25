@@ -137,9 +137,15 @@
 
 
 /* ..................Comments............................. */
-
+.Comments {
+  margin-bottom: 20px;
+}
 .Comments_list {
   list-style: none;
+  padding-left: 0;
+}
+.Card_bg {
+  background-color: rgb(235, 225, 195) !important;
 }
 
 /* ..................SingleComments............................. */
