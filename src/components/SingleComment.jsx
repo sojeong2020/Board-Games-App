@@ -4,7 +4,7 @@ import {UserContext} from '../contexts/User';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
-import  Button  from 'react-bootstrap/Button';
+import  {Card, Button}  from 'react-bootstrap';
 
 
 
@@ -35,9 +35,19 @@ const SingleComment = ({singleComment,comment_id}) => {
 
     return (
         <div>
-        <p>Vote :{singleComment.votes + vote}</p>
+        
+            {/* <Card.Body>
+                <Card.Text>Vote :{singleComment.votes + vote}</Card.Text>
+                <Button  className="Custom-btn-comment" disabled={vote > 0} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button>
+                <Card.Text>{messageCommentVote}</Card.Text>
+
+            </Card.Body>
+             */}
+
+         <p>Vote :{singleComment.votes + vote}</p>
         <Button  className="Custom-btn-comment" disabled={vote > 0} onClick={incVotes}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button>
-        <p style={{color: "red"}}>{messageCommentVote}</p>
+        <p style={{color: "red"}}>{messageCommentVote}</p> 
+        
         </div>
     );
 }; 

@@ -4,6 +4,8 @@ import {UserContext} from '../contexts/User';
 import { getSingleReview } from '../utils/api';
 import { patchReview } from '../utils/api'; 
 import { useParams } from 'react-router-dom';
+import {Link} from 'react-router-dom'
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
@@ -64,9 +66,12 @@ const SingleReview = () => {
                 </Card.Body>
                 
                 <Card.Body> 
-                <Card.Link href={`/reviews/${review.review_id}/comments`}>See comments</Card.Link>
-                <Card.Link href={`/reviews/${review.review_id}/comments/add`}>Add comment</Card.Link>
-               
+                <Link to={`/reviews/${review.review_id}/comments`}>
+                <Card.Text>See comments</Card.Text>
+                </Link>
+                <Link to={`/reviews/${review.review_id}/comments/add`}>
+                <Card.Text>Add comment</Card.Text>
+               </Link> 
                 </Card.Body>
             </Card>
             </Container> 
