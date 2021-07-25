@@ -3,8 +3,8 @@
 
 ## Information
 
-Backend Repository :
-Deployed App:
+Backend Repository :https://github.com/sojeong2020/be-nc-games
+Deployed App:https://competent-jepsen-ad94e4.netlify.app
 
 ### How to run project locally 
 
