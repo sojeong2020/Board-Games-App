@@ -207,6 +207,15 @@
 .Sort {
   margin-top: 20px;
 }
+.Sort select {
+  margin-left: 10px;
+  padding:5px;
+  border-radius: 5px;
+  
+}
+.Sort p {
+  font-size: 1.2rem;
+}
 
 
 /* ..................Footer............................. */
@@ -224,7 +233,7 @@
     font-size: 1.5rem;
 
   } 
-  .Reviews_list {
+  /* .Reviews_list {
     margin:30px 100px;
     padding:15px 50px;
   }
@@ -236,5 +245,8 @@
     margin:30px 200px;
     padding:30px 100px;
   }
+  .Comments_list {
+    margin:30px 100px;
+  }  */
 
 }

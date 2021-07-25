@@ -33,11 +33,11 @@ const Comments = () => {
                     return (
                     <li key={idx}>
                     <Card className="Card_bg">
-                    <Card.Header>{comments.length === 0? "no comments": "comments"}</Card.Header>
+                    <Card.Header>{comments.length === 0? "no comments": "comment"}</Card.Header>
                       <Card.Body>
                       <Card.Text>Author : {comment.author}</Card.Text>
                       <Card.Text>{comment.created_at}</Card.Text>
-                      <Card.Text>comment: {comment.body}</Card.Text>
+                      <Card.Text>{comment.body}</Card.Text>
 
                       <SingleComment singleComment={comment}
                                        comment_id={comment.comment_id} />
