@@ -94,6 +94,11 @@
 
 /* ..................Reviews............................. */
  
+.Reviews h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
 .Reviews_list li {
   list-style: none;
   margin-bottom: 20px;
@@ -118,18 +123,19 @@
 
 .Category_list li {
  list-style: none;
+ margin-top: 15px;
 }
 
 .Reviews_category li {
   list-style: none;
+  margin-bottom: 20px;
+  margin-left: -25px;
+}
+.Reviews_category h2 {
+  color:darkblue;
 }
 
-.ReviewByCategory_img {
-  width:320px;
-  height:320px;
-  border-radius: 100%;
 
-}
 
 
 /* ..................Comments............................. */
@@ -216,6 +222,11 @@
   } 
   .Reviews_list {
     margin:30px 100px;
+    padding:15px 50px;
+  }
+  .Reviews_category {
+    margin:30px 100px;
+    padding:15px 50px;
   }
 
 }

@@ -2,6 +2,8 @@ import {useState,useEffect} from 'react';
 import { getCategories, getReviews} from '../utils/api';
 import {Link} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import  {Button, Container, Card, Row, Col}  from 'react-bootstrap';
+
 
 
 
@@ -27,49 +29,58 @@ const Categories = () => {
    
  return (
      <main>
+         <Container>
         <section className="Category_list">
-            <div className="Container">
+        
             <ul>
             { categories.map((category)=>{
                      return(
                          <li key={category.slug}>
                         <Link className='Text-link' to={`/reviews/category/${category.slug}`}>
-                         <h2>{category.slug}</h2> 
+                        <Button className="Category_slug" variant="outline-success" size="lg">{category.slug}</Button>  
                         </Link>
                          </li>
-                       
-                           
-                    );
+                       );
                  })
             } 
             </ul>
-            </div>
-           
+        
         </section>
 
-        <section className="Reviews_category">      
+        <section className="Reviews_category"> 
+
             <h1> {category? `Reviews by ${category}`: null}</h1>
-            <div className="Container">
+            <h2>{category === "children's games" ? "---There is no reviews---": null }</h2>
             <ul>
             {reviewsByCategory.map((review)=>{
                 return (
                     <li key={review.title}>
-                        <h3>{review.title}</h3>
+                         <Card>
+                             <Row>
+                                 <Col md>
                         <Link className='Text-link' to={`/reviews/${review.review_id}`}>
-                        <img className="ReviewByCategory_img" src={review.review_img_url} alt={review.title}></img>
+                            <Card.Img src={review.review_img_url}/>
                         </Link>
-                        <p className="Reviews_body">{review.review_body}</p>
-                        <Link className='Text-link' to={`/reviews/${review.review_id}`}>
-                            <p>Read more</p>
-                        </Link>
+                         <Card.Body>
+                             <Card.Title>{review.title}</Card.Title>
+                             <Card.Text>{review.review_body}</Card.Text>
+                             <Link className='Text-link' to={`/reviews/${review.review_id}`}>
+
+                             <Button>Read More</Button>
+                             </Link>
+                         </Card.Body>
+                         </Col>
+                         </Row>
+                        </Card>
                     </li>
                 )
             })} 
             </ul>
-            </div>
+            
            
             
         </section>
+        </Container>
         </main>
     );
 };

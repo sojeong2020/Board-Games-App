@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import { getReviews } from '../utils/api';
 import {Link} from 'react-router-dom'
 import SortBy from './SortBy';
-import  {Button, Form, Container, Card, Row, Col}  from 'react-bootstrap';
+import  {Button, Container, Card, Row, Col}  from 'react-bootstrap';
 
 
 
@@ -32,7 +32,7 @@ const Reviews = () => {
     
    if(hasError) return <p>Something went wrong :( </p>
     return (
-        <main>
+        <section className="Reviews">
            <Container>
 
            <SortBy setReviews={setReviews}/>
@@ -77,7 +77,7 @@ const Reviews = () => {
             </ul>
          </div>
          </Container>
-        </main>
+        </section>
        
     );
 };
