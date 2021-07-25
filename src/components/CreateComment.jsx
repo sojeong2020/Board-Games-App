@@ -40,8 +40,8 @@ return (
     <Container>
     <Form onSubmit={handleSubmit}>
         <Form.Group>
-        {user.username !== 'who' ? <p>author {user.username}</p>: null }
-        <Form.Label> comment </Form.Label>
+        {user.username !== 'who' ? <p>Author :{user.username}</p>: null }
+        <Form.Label> Comment </Form.Label>
         <Form.Control as="textarea" rows={5} required
                 value={body}
                 onChange={(e)=> setBody(e.target.value)}/>
@@ -50,11 +50,11 @@ return (
 
         </Form.Group>
         <div className="Create_add">
-        <Button  type="submit" className="Button_add">add</Button>
+        <Button  type="submit" className="Button_add">Add</Button>
         </div>
         <Form.Group>
         <Link to ={`/reviews/${review_id}/comments`}>
-        <Form.Text>  back to comments </Form.Text>
+        <Form.Text>  Back to comments </Form.Text>
             </Link>
         </Form.Group>
        
