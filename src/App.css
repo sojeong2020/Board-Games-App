@@ -103,16 +103,14 @@
   list-style: none;
   margin-bottom: 20px;
   margin-left: -25px;
-
 }
 
 
 
 /* ..................SingleReview............................. */
 
-.SingleReview_img {
-  width:320px;
-  height:320px;
+.Review {
+ margin:20px auto;
 }
 .Custom-btn-review {
   background-color: rgb(240, 144, 107) !important;
@@ -227,6 +225,10 @@
   .Reviews_category {
     margin:30px 100px;
     padding:15px 50px;
+  }
+  .Review {
+    margin:30px 200px;
+    padding:30px 100px;
   }
 
 }

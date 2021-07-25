@@ -4,11 +4,10 @@ import {UserContext} from '../contexts/User';
 import { getSingleReview } from '../utils/api';
 import { patchReview } from '../utils/api'; 
 import { useParams } from 'react-router-dom';
-import {Link} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp} from '@fortawesome/free-solid-svg-icons'
-import  Button  from 'react-bootstrap/Button';
+import  {Button, Container, Card}  from 'react-bootstrap';
 
 
 
@@ -48,33 +47,30 @@ const SingleReview = () => {
     }
 
     return (
-        <main className="Review">
-            <div>
+        <section className="Review">
+            <Container>
+            <Card>
+                <Card.Img variant="top" src={review.review_img_url}/>
+                <Card.Body>
+                    <Card.Title>{review.title}</Card.Title>
+                    <Card.Text>{review.review_body}</Card.Text>
+                
+                <Card.Text>Designer : {review.designer}</Card.Text>
+                <Card.Text>Review by {review.owner}</Card.Text>
+                <Card.Text>{review.votes +vote}</Card.Text>
+                <Card.Text style={{ color: "red" }}>{messageVote}</Card.Text>
 
-            <h2>{review.title}</h2>
-            <img className="SingleReview_img" src={review.review_img_url} alt={review.title}></img>
-            <p>Designer : {review.designer}</p>
-            <p>Review by {review.owner}</p>
-            <p className="Reviews_body">{review.review_body}</p>
-
-            <p>votes : {review.votes +vote}</p>
-            <p style={{color: "red"}}>{messageVote}</p>
-
-            <Button className="Custom-btn-review" disabled={vote > 0} onClick={()=>{incVotes(1)}}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button> 
-
-
-            <Link to ={`/reviews/${review.review_id}/comments`}>
-                       <p>See comments</p> 
-            </Link>
-            </div>
- 
-            <div>
-            <Link to ={`/reviews/${review.review_id}/comments/add`}>
-                 <p>Add comment</p>
-            </Link>
-            </div>
-            
-        </main>
+                <Button className="Custom-btn-review" type="submit" disabled={vote > 0} onClick={()=>{incVotes(1)}}><FontAwesomeIcon style = {{color: 'red'}} icon={faThumbsUp} /></Button>
+                </Card.Body>
+                
+                <Card.Body> 
+                <Card.Link href={`/reviews/${review.review_id}/comments`}>See comments</Card.Link>
+                <Card.Link href={`/reviews/${review.review_id}/comments/add`}>Add comment</Card.Link>
+               
+                </Card.Body>
+            </Card>
+            </Container> 
+        </section>
     );
 };
 
