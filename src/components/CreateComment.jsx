@@ -12,7 +12,6 @@ const CreateComment = () => {
  const [messageComment,setMessageComment]=useState(null);
 
  const {user}=useContext(UserContext);
- console.log(user,"user")
  const {review_id} =useParams();
 
  const handleSubmit=(e) =>{

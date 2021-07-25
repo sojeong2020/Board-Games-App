@@ -16,7 +16,6 @@ const Reviews = () => {
 
    useEffect(()=>{
        getReviews().then((reviewsFromApi)=>{
-         console.log(reviewsFromApi)
         setReviews(reviewsFromApi) 
         setIsLoading(false);
        })
@@ -47,7 +46,7 @@ const Reviews = () => {
                         <li key={review.review_id}>
                             <Card>
                                 <Row> 
-                                    <Col md>
+                                <Col md>
                                 <Link to={`/reviews/${review.review_id}`}>
                                 <Card.Img src={review.review_img_url} />
                                 </Link>

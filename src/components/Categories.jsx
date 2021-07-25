@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import { getCategories, getReviews} from '../utils/api';
 import {Link} from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import  {Button, Container, Card, Row, Col}  from 'react-bootstrap';
+import  {Button, Container, Card}  from 'react-bootstrap';
 
 
 
@@ -11,18 +11,15 @@ const Categories = () => {
     const [categories, setCategories] = useState([]);
     const [reviewsByCategory, setReviewsByCategory]=useState([]);
     const {category} =useParams();
-    console.log(category,"category")
    
     useEffect(()=>{
         getCategories().then((categoriesFromApi)=>{
-            console.log(categoriesFromApi)
             setCategories(categoriesFromApi)
         })
     },[])
 
     useEffect(()=>{
         getReviews(category).then((reviewsFromApi)=>{
-            console.log(reviewsFromApi)
             setReviewsByCategory(reviewsFromApi)
         })
     },[category])
@@ -55,22 +52,19 @@ const Categories = () => {
             {reviewsByCategory.map((review)=>{
                 return (
                     <li key={review.title}>
-                         <Card>
-                             <Row>
-                                 <Col md>
+                        <Card>
+                        
                         <Link className='Text-link' to={`/reviews/${review.review_id}`}>
                             <Card.Img src={review.review_img_url}/>
                         </Link>
-                         <Card.Body>
-                             <Card.Title>{review.title}</Card.Title>
-                             <Card.Text>{review.review_body}</Card.Text>
-                             <Link className='Text-link' to={`/reviews/${review.review_id}`}>
-
-                             <Button>Read More</Button>
-                             </Link>
-                         </Card.Body>
-                         </Col>
-                         </Row>
+                        <Card.Body>
+                            <Card.Title>{review.title}</Card.Title>
+                            <Card.Text>{review.review_body}</Card.Text>
+                            <Link className='Text-link' to={`/reviews/${review.review_id}`}>
+                            <Button>Read More</Button>
+                            </Link>
+                        </Card.Body>
+                        
                         </Card>
                     </li>
                 )

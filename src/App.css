@@ -123,7 +123,9 @@
  list-style: none;
  margin-top: 15px;
 }
-
+.Category_slug {
+  width:300px;
+}
 .Reviews_category li {
   list-style: none;
   margin-bottom: 20px;
@@ -231,22 +233,5 @@
   }
   .Create_comment{
     font-size: 1.5rem;
-
   } 
-  /* .Reviews_list {
-    margin:30px 100px;
-    padding:15px 50px;
-  }
-  .Reviews_category {
-    margin:30px 100px;
-    padding:15px 50px;
-  }
-  .Review {
-    margin:30px 200px;
-    padding:30px 100px;
-  }
-  .Comments_list {
-    margin:30px 100px;
-  }  */
-
 }

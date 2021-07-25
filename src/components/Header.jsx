@@ -14,7 +14,6 @@ const Header = () => {
 
     useEffect(()=>{
     getUserByUsername(user.username).then((userFromApi)=>{
-        console.log(userFromApi)
         setUserLogin(userFromApi)
 
     })

@@ -9,11 +9,8 @@ import  Button  from 'react-bootstrap/Button';
 
 
 const Delete = ({commentId, commentAuthor, setComments, comments}) => {
-    console.log(commentId)
-    console.log(comments)
     const [messageDelete,setMessageDelete]=useState("");
     const {user} = useContext(UserContext);
-    console.log(user)
 
     const handleClick =(e)=>{
         e.preventDefault();

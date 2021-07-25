@@ -8,7 +8,6 @@ import  { Form }  from 'react-bootstrap';
 const SortBy = ({setReviews}) => {
     const [sortedBy,setSortedBy] = useState([]);
 
-    console.log(sortedBy)
 
     const handleChange=(event)=>{
         setSortedBy({value:event.target.value})
@@ -23,7 +22,6 @@ const SortBy = ({setReviews}) => {
         getReviewsBySortBy(sortedBy).then((sortedReviewsFromApi)=>{
             setReviews(sortedReviewsFromApi)
 
-           console.log(sortedReviewsFromApi);
 
         })
     },[sortedBy]) 
