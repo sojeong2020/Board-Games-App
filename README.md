@@ -1,6 +1,8 @@
 # Game Reviews React App   :game_die:
 
-![GitHub Logo](/src/img/gameCategory.jpg | width=100)
+<img src="/src/img/gameCategory.jpg " width="48">
+
+<!-- ![GitHub Logo](/src/img/gameCategory.jpg | width=100) -->
 
 
 ## Information
