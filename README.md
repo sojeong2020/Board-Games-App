@@ -1,10 +1,10 @@
-# Game Reviews React App
+# Game Reviews React App   :game_die:
 
 
 ## Information
 
-Backend Repository :
-Deployed App:
+This is a social game review website where you can read, comment and vote on game reviews. </br>
+It is built with React and React-Bootstrap.
 
 ### How to run project locally 
 
