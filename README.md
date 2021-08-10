@@ -1,6 +1,6 @@
 # Game Reviews React App   :game_die:
 
-<img src="/src/img/gameHome.png " width="300">  <img src="/src/img/gameCategory.jpg " width="300">
+<img src="/src/img/gameHome2.png " width="250">  <img src="/src/img/gameCategory.jpg " width="250"> <img src="/src/img/gameAddComment.jpg " width="250">
 
 ## Information
 
