@@ -1,14 +1,14 @@
 # Game Reviews React App   :game_die:
 
-![GitHub Logo](/src/img/gameCategory)
+![GitHub Logo](/src/img/gameCategory.jpg)
 
 
 ## Information
 
 This is a social game review website where you can read, comment and vote on game reviews. </br>
 It is built with React and React-Bootstrap.</br>
-Here is the [link](https://games-reviews.netlify.app) to hosted version.</br>
-Also here is the [link](https://first-nc-games.herokuapp.com/api) to hosted backend.
+Here is the [link](https://games-reviews.netlify.app) to hosted version and the [link](https://first-nc-games.herokuapp.com/api) to hosted REST API.
+
 
 ## Functionality
 
